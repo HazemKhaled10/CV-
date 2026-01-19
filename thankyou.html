@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Upload Your CV</title>
+    <title>Thank You</title>
 
     <style>
         body {
@@ -13,39 +13,22 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-
-            background-image: url("photos/13cd4f43-ef42-406a-a7aa-189392f38141.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: linear-gradient(135deg, #2c7be5, #00c6ff);
         }
 
-        /* Dark overlay */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.45);
-            z-index: -1;
-        }
-
-        /* GLASS CONTAINER */
-        .container {
-            width: 380px;
-            padding: 35px;
+        .card {
+            width: 90%;
+            max-width: 420px;
+            padding: 40px 30px;
             border-radius: 18px;
-
             background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-
             text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            color: #fff;
         }
 
-        /* LOGO */
         .logo {
             width: 90px;
             height: 90px;
@@ -55,81 +38,59 @@
             border: 2px solid rgba(255, 255, 255, 0.6);
         }
 
-        h2 {
+        h1 {
             color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
             margin-bottom: 15px;
-            border-radius: 8px;
-            border: none;
-            font-size: 14px;
-            outline: none;
         }
 
-        input[type="file"] {
-            background: rgba(255, 255, 255, 0.9);
+        p {
+            color: #f0f0f0;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 15px;
         }
 
-        input[type="text"],
-        input[type="email"] {
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        button {
-            width: 100%;
-            padding: 13px;
-            background: linear-gradient(135deg, #2c7be5, #00c6ff);
-            color: white;
-            border: none;
-            border-radius: 10px;
+        .arabic {
+            direction: rtl;
             font-size: 16px;
-            cursor: pointer;
+            color: #f0f0f0;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 24px;
+            background: #2c7be5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 15px;
             transition: 0.3s;
         }
 
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .note {
-            margin-top: 12px;
-            font-size: 12px;
-            color: #f0f0f0;
+        .btn:hover {
+            background: #1a5bb8;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="card">
 
-        <!-- LOGO -->
         <img src="photos/1734801439337.jpg" alt="Company Logo" class="logo">
 
-        <h2>Upload Your CV</h2>
-<form action="https://formsubmit.co/khazem253@gmail.com" method="POST" enctype="multipart/form-data">
+        <h1>Thank You</h1>
+        <p>Your CV has been successfully submitted.<br>We appreciate your interest in joining our organization.</p>
+        <p>Our HR team will review your application and contact you if your qualifications match our requirements.</p>
 
-    <!-- FormSubmit settings -->
-    <input type="hidden" name="_next" value="https://github.com/HazemKhaled10/CV-/blob/main/thankyou.html"> <!-- works online or live server -->
-    <input type="hidden" name="_subject" value="New CV Submission">
-    <input type="hidden" name="_captcha" value="false">
-
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required>
-
-    <button type="submit">Submit</button>
-</form>
-
-
-        <div class="note">
-            Accepted formats: PDF, DOC, DOCX, JPG, PNG
+        <div class="arabic">
+            <p>شكرًا لتقديم سيرتك الذاتية.<br>نُقدّر اهتمامك بالانضمام إلى فريقنا.</p>
+            <p>سيقوم فريق الموارد البشرية بمراجعة طلبك بعناية، وسيتم التواصل معك إذا توافق مؤهلاتك مع متطلباتنا.</p>
         </div>
+
+        <a href="index.html" class="btn">Back to Home</a>
 
     </div>
 

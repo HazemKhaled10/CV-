@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c7be5, #00c6ff);
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            width: 420px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #2c7be5;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .arabic {
+            direction: rtl;
+            font-size: 16px;
+            color: #444;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 24px;
+            background: #2c7be5;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1a5bb8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <!-- LOGO -->
+        <img src="photos/1734801439337.jpg" alt="Company Logo" class="logo">
+
+        <!-- ENGLISH TEXT -->
+        <h1>Thank You</h1>
+        <p>
+            Your CV has been successfully submitted.<br>
+            We sincerely appreciate your interest in joining our organization.
+        </p>
+        <p>
+            Our HR team will carefully review your application.
+            If your qualifications match our requirements, we will contact you shortly.
+        </p>
+
+        <!-- ARABIC TEXT -->
+        <div class="arabic">
+            <p>
+                شكرًا لتقديم سيرتك الذاتية.<br>
+                نُقدّر اهتمامك بالانضمام إلى فريقنا.
+            </p>
+            <p>
+                سيقوم فريق الموارد البشرية بمراجعة طلبك بعناية،
+                وسيتم التواصل معك في حال توافق مؤهلاتك مع متطلباتنا.
+            </p>
+        </div>
+
+        <!-- BACK BUTTON -->
+        <a href="index.html" class="btn">Back to Home</a>
+
+    </div>
+
+</body>
+
+</html>

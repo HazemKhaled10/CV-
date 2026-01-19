@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Your CV</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+
+            background-image: url("photos/13cd4f43-ef42-406a-a7aa-189392f38141.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Dark overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+
+        /* GLASS CONTAINER */
+        .container {
+            width: 380px;
+            padding: 35px;
+            border-radius: 18px;
+
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+            text-align: center;
+        }
+
+        /* LOGO */
+        .logo {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input[type="file"] {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, #2c7be5, #00c6ff);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .note {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LOGO -->
+        <img src="photos/1734801439337.jpg" alt="Company Logo" class="logo">
+
+        <h2>Upload Your CV</h2>
+<form action="https://formsubmit.co/khazem253@gmail.com" method="POST" enctype="multipart/form-data">
+
+    <!-- FormSubmit settings -->
+    <input type="hidden" name="_next" value="thankyou.html"> <!-- works online or live server -->
+    <input type="hidden" name="_subject" value="New CV Submission">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+        <div class="note">
+            Accepted formats: PDF, DOC, DOCX, JPG, PNG
+        </div>
+
+    </div>
+
+</body>
+
+</html>

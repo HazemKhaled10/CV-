@@ -13,7 +13,6 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-
             background-image: url("photos/13cd4f43-ef42-406a-a7aa-189392f38141.png");
             background-size: cover;
             background-position: center;
@@ -29,23 +28,20 @@
             z-index: -1;
         }
 
-        /* GLASS CONTAINER */
+        /* Glass container */
         .container {
-            width: 380px;
+            width: 90%;
+            max-width: 380px;
             padding: 35px;
             border-radius: 18px;
-
             background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-
             text-align: center;
         }
 
-        /* LOGO */
         .logo {
             width: 90px;
             height: 90px;
@@ -68,14 +64,6 @@
             border: none;
             font-size: 14px;
             outline: none;
-        }
-
-        input[type="file"] {
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        input[type="text"],
-        input[type="email"] {
             background: rgba(255, 255, 255, 0.9);
         }
 
@@ -108,30 +96,38 @@
 
     <div class="container">
 
-        <!-- LOGO -->
         <img src="photos/1734801439337.jpg" alt="Company Logo" class="logo">
-
         <h2>Upload Your CV</h2>
-<form action="https://formsubmit.co/khazem253@gmail.com" method="POST" enctype="multipart/form-data">
 
-    <!-- FormSubmit settings -->
-    <input type="hidden" name="_next" value="https://hazemkhaled10.github.io/CV-/"> <!-- works online or live server -->
-    <input type="hidden" name="_subject" value="New CV Submission">
-    <input type="hidden" name="_captcha" value="false">
+        <form id="cvForm" action="https://formsubmit.co/khazem253@gmail.com" method="POST"
+            enctype="multipart/form-data">
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_next" value="https://hazemkhaled10.github.io/CV-/thankyou.html">
+            <input type="hidden" name="_subject" value="New CV Submission">
+            <input type="hidden" name="_captcha" value="false">
 
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required>
 
-    <button type="submit">Submit</button>
-</form>
-
+            <button type="submit">Submit</button>
+        </form>
 
         <div class="note">
             Accepted formats: PDF, DOC, DOCX, JPG, PNG
         </div>
 
     </div>
+
+    <!-- JS fallback redirect for local testing -->
+    <script>
+        document.getElementById('cvForm').addEventListener('submit', function (e) {
+            if (location.protocol === "file:") {
+                e.preventDefault(); // prevent FormSubmit
+                window.location.href = "thankyou.html"; // local redirect
+            }
+        });
+    </script>
 
 </body>
 

@@ -13,9 +13,22 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #2c7be5, #00c6ff);
+            background-image: url("photos/13cd4f43-ef42-406a-a7aa-189392f38141.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
+        /* Dark overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+
+        /* Glass card */
         .card {
             width: 90%;
             max-width: 420px;
@@ -61,7 +74,7 @@
             display: inline-block;
             margin-top: 25px;
             padding: 12px 24px;
-            background: #2c7be5;
+            background: linear-gradient(135deg, #2c7be5, #00c6ff);
             color: white;
             text-decoration: none;
             border-radius: 10px;
@@ -70,7 +83,7 @@
         }
 
         .btn:hover {
-            background: #1a5bb8;
+            background: linear-gradient(135deg, #1a5bb8, #0099ff);
         }
     </style>
 </head>

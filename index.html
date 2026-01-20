@@ -4,24 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>NTAM Call Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body {
+        html, body {
             margin: 0;
-            min-height: 100vh;
+            padding: 0;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100svh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
             background-image: url("photos/13cd4f43-ef42-406a-a7aa-189392f38141.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
         }
 
         body::before {
             content: "";
-            position: fixed;
+            position: absolute;
             inset: 0;
             background: rgba(0, 0, 0, 0.45);
             z-index: -1;
@@ -35,7 +42,6 @@
             background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
             color: #fff;
         }
@@ -54,25 +60,19 @@
             margin-bottom: 20px;
         }
 
-        p {
-            line-height: 1.7;
+        p, li {
             color: #f0f0f0;
-            margin-bottom: 15px;
+            line-height: 1.7;
         }
 
         ul {
             margin: 20px 0;
         }
 
-        ul li {
-            margin-bottom: 8px;
-        }
-
         .arabic {
             direction: rtl;
             font-size: 16px;
             margin-top: 25px;
-            color: #f0f0f0;
         }
 
         .center {
@@ -88,12 +88,6 @@
             text-decoration: none;
             border-radius: 10px;
             font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -101,23 +95,20 @@
 <body>
 
     <div class="container">
-
-        <img src="photos/1734801439337.jpg" alt="NTAM Logo" class="logo">
+        <img src="photos/1734801439337.jpg" class="logo" alt="NTAM Logo">
 
         <h1>NTAM Call Center</h1>
 
         <p>
             <strong>NTAM</strong> is a professional call center company specializing in hospitality
-            customer service and reservations management in the Holy City of Makkah.
+            customer service and reservation management in Makkah.
         </p>
 
         <p>
-            We proudly operate the <strong>ALL – Accor Live Limitless</strong> accounts for
-            four prestigious Accor hotels, ensuring exceptional guest experience and
-            centralized communication services.
+            We proudly manage the <strong>ALL – Accor Live Limitless</strong> accounts for
+            four prestigious Accor hotels.
         </p>
 
-        <p><strong>Our Partner Hotels:</strong></p>
         <ul>
             <li>Fairmont Makkah Clock Royal Tower</li>
             <li>Raffles Makkah Palace</li>
@@ -127,20 +118,15 @@
 
         <div class="arabic">
             <p>
-                تُعد شركة <strong>NTAM</strong> مركز اتصال متخصص في تقديم خدمات الضيافة
-                وإدارة الحجوزات لفنادق مكة المكرمة بأعلى معايير الجودة.
-            </p>
-            <p>
-                نفخر بإدارة حسابات <strong>ALL – Accor</strong> لأربعة من أرقى فنادق مكة المكرمة.
+                تُعد شركة NTAM مركز اتصال متخصص في خدمات الضيافة
+                وإدارة الحجوزات لفنادق مكة المكرمة.
             </p>
         </div>
 
         <div class="center">
             <a href="apply.html" class="btn">Apply Now</a>
         </div>
-
     </div>
 
 </body>
-
 </html>

@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply – NTAM</title>
-
     <style>
         body {
             margin: 0;
@@ -30,37 +28,31 @@
 
         .container {
             width: 90%;
-            max-width: 400px;
-            padding: 30px 20px;
+            max-width: 380px;
+            padding: 35px;
             border-radius: 18px;
             background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
             text-align: center;
-            color: #fff;
-            transition: all 0.3s ease-in-out;
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             margin-bottom: 15px;
             border: 2px solid rgba(255, 255, 255, 0.6);
-            object-fit: cover;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
         h2 {
-            font-size: 22px;
+            color: #fff;
             margin-bottom: 20px;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="file"] {
+        input {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
@@ -68,7 +60,6 @@
             border: none;
             outline: none;
             background: rgba(255, 255, 255, 0.9);
-            font-size: 16px;
         }
 
         button {
@@ -93,104 +84,21 @@
             font-size: 12px;
             color: #f0f0f0;
         }
-
-        .thankyou-message {
-            display: none;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-            color: #00ffcc;
-        }
-
-        @media (max-width: 450px) {
-            .container {
-                padding: 25px 15px;
-                width: 95%;
-            }
-
-            .logo {
-                width: 70px;
-                height: 70px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            input,
-            button {
-                font-size: 15px;
-            }
-
-            .note {
-                font-size: 11px;
-            }
-
-            .thankyou-message {
-                font-size: 16px;
-            }
-        }
     </style>
 </head>
 
 <body>
-
-    <div class="container">
-        <img src="photos/1734801439337.jpg" class="logo" alt="NTAM Logo">
+    <div class="container"> <img src="photos/1734801439337.jpg" class="logo" alt="NTAM Logo">
         <h2>Apply Now</h2>
-
-        <form id="cvForm" action="https://formsubmit.co/khazem253@gmail.com" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="_next" value="thankyou.html"> <!-- redirect here -->
-            <input type="hidden" name="_subject" value="New CV Submission - NTAM">
-            <input type="hidden" name="_captcha" value="false">
-        
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required>
-        
-            <button type="submit">Submit CV</button>
-        </form>
-
-
-        <div class="note">
-            Accepted formats: PDF, DOC, DOCX, JPG, PNG
-        </div>
-
-        <div class="thankyou-message" id="thankyouMessage">
-            ✅ Thank you! Your CV has been submitted successfully.
-        </div>
+        <form id="cvForm" action="https://formsubmit.co/khazem253@icloud.com" method="POST"
+            enctype="multipart/form-data"> <input type="hidden" name="_next"
+                value="https://hazemkhaled10.github.io/CV-/thankyou.html"> <input type="hidden" name="_subject"
+                value="New CV Submission - NTAM"> <input type="hidden" name="_captcha" value="false"> <input type="text"
+                name="name" placeholder="Your Name" required> <input type="email" name="email" placeholder="Your Email"
+                required> <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required> <button
+                type="submit">Submit CV</button> </form>
+        <div class="note"> Accepted formats: PDF, DOC, DOCX, JPG, PNG </div>
     </div>
-
-    <script>
-        // Handle form submission without leaving the page
-        const form = document.getElementById("cvForm");
-        const thankyou = document.getElementById("thankyouMessage");
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); // prevent default submission
-
-            const formData = new FormData(form);
-
-            // Send form via fetch to FormSubmit
-            fetch(form.action, {
-                method: form.method,
-                body: formData,
-            })
-                .then(response => {
-                    if (response.ok) {
-                        form.style.display = "none"; // hide form
-                        thankyou.style.display = "block"; // show thank you message
-                    } else {
-                        alert("Oops! Something went wrong. Please try again.");
-                    }
-                })
-                .catch(error => {
-                    alert("Error submitting form. Please try again.");
-                    console.error(error);
-                });
-        });
-    </script>
-
 </body>
 
 </html>

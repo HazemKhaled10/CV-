@@ -4,31 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Apply – NTAM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            min-height: 100%;
-            font-family: Arial, sans-serif;
-        }
-
         body {
-            min-height: 100svh;
+            margin: 0;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Arial, sans-serif;
             background-image: url("photos/13cd4f43-ef42-406a-a7aa-189392f38141.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
         }
 
         body::before {
             content: "";
-            position: absolute;
+            position: fixed;
             inset: 0;
             background: rgba(0, 0, 0, 0.45);
             z-index: -1;
@@ -42,6 +35,7 @@
             background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
             text-align: center;
         }
@@ -66,6 +60,7 @@
             border-radius: 8px;
             border: none;
             outline: none;
+            background: rgba(255, 255, 255, 0.9);
         }
 
         button {
@@ -76,12 +71,19 @@
             border: none;
             border-radius: 10px;
             font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .note {
+            margin-top: 12px;
             font-size: 12px;
             color: #f0f0f0;
-            margin-top: 10px;
         }
     </style>
 </head>
@@ -89,27 +91,30 @@
 <body>
 
     <div class="container">
-        <img src="photos/1734801439337.jpg" class="logo" alt="NTAM Logo">
-        <h2>Apply Now</h2>
 
-        <form action="https://formsubmit.co/khazem253@icloud.com" method="POST"
+        <img src="photos/1734801439337.jpg" class="logo" alt="NTAM Logo">
+        <h2>Upload Your CV</h2>
+
+        <form id="cvForm" action="https://formsubmit.co/khazem253@gmail.com" method="POST"
             enctype="multipart/form-data">
 
-            <input type="hidden" name="_next"
-                value="https://hazemkhaled10.github.io/CV-/thankyou.html">
+            <input type="hidden" name="_next" value="https://hazemkhaled10.github.io/CV-/thankyou.html">
+            <input type="hidden" name="_subject" value="New CV Submission - NTAM">
             <input type="hidden" name="_captcha" value="false">
 
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <input type="file" name="attachment" required>
+            <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required>
 
             <button type="submit">Submit CV</button>
         </form>
 
         <div class="note">
-            PDF, DOC, DOCX, JPG, PNG
+            Accepted formats: PDF, DOC, DOCX, JPG, PNG
         </div>
+
     </div>
 
 </body>
+
 </html>

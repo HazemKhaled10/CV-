@@ -4,24 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Thank You – NTAM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body {
+        html, body {
             margin: 0;
-            min-height: 100vh;
+            padding: 0;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100svh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
             background-image: url("photos/13cd4f43-ef42-406a-a7aa-189392f38141.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
         }
 
         body::before {
             content: "";
-            position: fixed;
+            position: absolute;
             inset: 0;
             background: rgba(0, 0, 0, 0.45);
             z-index: -1;
@@ -36,7 +43,6 @@
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
             color: #fff;
         }
 
@@ -50,7 +56,7 @@
 
         .btn {
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 20px;
             padding: 12px 24px;
             background: linear-gradient(135deg, #2c7be5, #00c6ff);
             color: white;
@@ -63,21 +69,16 @@
 <body>
 
     <div class="card">
-
         <img src="photos/1734801439337.jpg" class="logo" alt="NTAM Logo">
 
         <h1>Thank You</h1>
         <p>Your CV has been successfully submitted.</p>
-        <p>Our HR team will contact you if your profile matches our requirements.</p>
+        <p>We will contact you if your profile matches our requirements.</p>
 
-        <div class="arabic" style="direction:rtl; margin-top:15px;">
-            <p>شكرًا لتقديم سيرتك الذاتية، سيتم التواصل معك في حال توافق مؤهلاتك مع متطلباتنا.</p>
-        </div>
+        <p style="direction:rtl;">شكرًا لتقديم سيرتك الذاتية</p>
 
         <a href="index.html" class="btn">Back to NTAM</a>
-
     </div>
 
 </body>
-
 </html>

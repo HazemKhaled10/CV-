@@ -139,18 +139,18 @@
         <img src="photos/1734801439337.jpg" class="logo" alt="NTAM Logo">
         <h2>Apply Now</h2>
 
-        <form id="cvForm" action="https://formsubmit.co/khazem253@icloud.com" method="POST"
-            enctype="multipart/form-data">
-            <!-- Removed _next to prevent redirect -->
+        <form id="cvForm" action="https://formsubmit.co/khazem253@gmail.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_next" value="thankyou.html"> <!-- redirect here -->
             <input type="hidden" name="_subject" value="New CV Submission - NTAM">
             <input type="hidden" name="_captcha" value="false">
-
+        
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required>
-
+        
             <button type="submit">Submit CV</button>
         </form>
+
 
         <div class="note">
             Accepted formats: PDF, DOC, DOCX, JPG, PNG

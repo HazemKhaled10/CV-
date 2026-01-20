@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             min-height: 100%;
@@ -72,4 +73,54 @@
         button {
             width: 100%;
             padding: 13px;
-            background: linear-gradient(135deg, #2c
+            background: linear-gradient(135deg, #2c7be5, #00c6ff);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .note {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="photos/1734801439337.jpg" alt="Company Logo" class="logo">
+        <h2>Upload Your CV</h2>
+
+        <form action="https://formsubmit.co/khazem253@gmail.com" method="POST" enctype="multipart/form-data">
+            <!-- Replace YOUR_GMAIL_HERE@gmail.com with a real Gmail you can access -->
+
+            <input type="hidden" name="_next" value="https://hazemkhaled10.github.io/CV-/thankyou.html">
+            <input type="hidden" name="_subject" value="New CV Submission">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/*" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="note">
+            Accepted formats: PDF, DOC, DOCX, JPG, PNG
+        </div>
+
+    </div>
+
+</body>
+
+</html>

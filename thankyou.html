@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Thank You</title>
+    <title>Thank You – NTAM</title>
 
     <style>
         body {
@@ -19,7 +19,6 @@
             background-repeat: no-repeat;
         }
 
-        /* Dark overlay */
         body::before {
             content: "";
             position: fixed;
@@ -28,11 +27,10 @@
             z-index: -1;
         }
 
-        /* Glass card */
         .card {
             width: 90%;
             max-width: 420px;
-            padding: 40px 30px;
+            padding: 40px;
             border-radius: 18px;
             background: rgba(255, 255, 255, 0.18);
             backdrop-filter: blur(15px);
@@ -45,29 +43,9 @@
         .logo {
             width: 90px;
             height: 90px;
-            object-fit: cover;
             border-radius: 50%;
             margin-bottom: 15px;
             border: 2px solid rgba(255, 255, 255, 0.6);
-        }
-
-        h1 {
-            color: #ffffff;
-            margin-bottom: 15px;
-        }
-
-        p {
-            color: #f0f0f0;
-            line-height: 1.6;
-            font-size: 15px;
-            margin-bottom: 15px;
-        }
-
-        .arabic {
-            direction: rtl;
-            font-size: 16px;
-            color: #f0f0f0;
-            margin-top: 20px;
         }
 
         .btn {
@@ -78,12 +56,6 @@
             color: white;
             text-decoration: none;
             border-radius: 10px;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: linear-gradient(135deg, #1a5bb8, #0099ff);
         }
     </style>
 </head>
@@ -92,18 +64,17 @@
 
     <div class="card">
 
-        <img src="photos/1734801439337.jpg" alt="Company Logo" class="logo">
+        <img src="photos/1734801439337.jpg" class="logo" alt="NTAM Logo">
 
         <h1>Thank You</h1>
-        <p>Your CV has been successfully submitted.<br>We appreciate your interest in joining our organization.</p>
-        <p>Our HR team will review your application and contact you if your qualifications match our requirements.</p>
+        <p>Your CV has been successfully submitted.</p>
+        <p>Our HR team will contact you if your profile matches our requirements.</p>
 
-        <div class="arabic">
-            <p>شكرًا لتقديم سيرتك الذاتية.<br>نُقدّر اهتمامك بالانضمام إلى فريقنا.</p>
-            <p>سيقوم فريق الموارد البشرية بمراجعة طلبك بعناية، وسيتم التواصل معك إذا توافق مؤهلاتك مع متطلباتنا.</p>
+        <div class="arabic" style="direction:rtl; margin-top:15px;">
+            <p>شكرًا لتقديم سيرتك الذاتية، سيتم التواصل معك في حال توافق مؤهلاتك مع متطلباتنا.</p>
         </div>
 
-        <a href="index.html" class="btn">Back to Home</a>
+        <a href="index.html" class="btn">Back to NTAM</a>
 
     </div>
 
